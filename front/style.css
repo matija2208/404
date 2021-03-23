@@ -205,7 +205,7 @@
 .form-title {
   margin: 0;
   text-align: center;
-  color: #25237a;
+  color: #f7ba58;
   font-size: 35px;
 }
 
@@ -253,6 +253,7 @@
   border-radius: 10px;
   padding: 5px;
   border: 2px solid #25237a;
+  width: flex;
 }
 .add-input {
   width: 100%;
