@@ -96,7 +96,7 @@
       color: #0082e6;
     }
     #check:checked ~ ul{
-      left: 0;
+    left: 0;
     }
     .mod{
       margin-left: 46%;
@@ -108,6 +108,7 @@
   
   body.dark {
       background: #0f1d2a;
+      color: #fffafa;
       /*011428*/
   }
   
