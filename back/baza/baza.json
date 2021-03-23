@@ -1,0 +1,45 @@
+{
+    "postovi": [
+      {
+        "sport": "Kosarka",
+        "tip": "Drustveno",
+        "sadrzaj": "Traze se ljudi za partiju basketa kod Gimnazije. Javite se na kontakt, trebaju nam 2 osobe.",
+        "lozinka": "cuprija035",
+        "kontakt": [
+            {
+            "ime": "Luka Mihajlovic",
+            "telefon": "0638654515",
+            "mail": "lukamihgimnazija@gmail.com"
+            }
+        ],
+        "info": [
+            {
+            "mesto": "Gimnazija",
+            "datum": "23/3",
+            "vreme": "16:00"
+            }
+        ]
+      },
+
+      {
+        "sport": "Fudbal",
+        "tip": "Turnir",
+        "sadrzaj": "Turnir se odrzava u S.C. Ada sa nagradama od 500 din. za pobednike. Za vise informacija javite se na kontakt.",
+        "lozinka": "scadaradosbrzi",
+        "kontakt": [
+            {
+            "ime": "Rados Brzakovic",
+            "telefon": "0648553241",
+            "mail": "fakeemailbrzi@gmail.com"
+            }
+        ],
+        "info": [
+            {
+            "mesto": "S.C. Ada",
+            "datum": "27/3",
+            "vreme": "18:00"
+            }
+        ]
+      }
+    ]
+  }

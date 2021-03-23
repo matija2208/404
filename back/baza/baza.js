@@ -3,6 +3,9 @@ const mongoose = require("mongoose");
 async function connect_baza(){
     try{
         const link="mongodb+srv://404tim:ravanica035@cluster0.grmff.mongodb.net/Postovi?retryWrites=true&w=majority";
+        /*404tim
+        ravanica035*/
+
         //konekt
         const connection = await mongoose.connect(link, {
             useNewUrlParser: true,

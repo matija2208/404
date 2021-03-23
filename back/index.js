@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const connect_baza = require("./baza");
+const connect_baza = require("./baza/baza");
 
 const PORT = 3000;
 
