@@ -13,11 +13,13 @@
     margin: 0;
     transition: background 0.3s linear;
   }
+  /*------------------------------Nav bar----------------------------------------------*/
   nav{
     /*background-image: linear-gradient(90deg, #0082e6, #e97c00);*/
     background: #0082e6;
     height: 80px;
     width: 100%;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.5), 0 0 40px rgba(0,0,0,0.2) inset;
   }
   label.logo{
     color: white;
@@ -96,6 +98,9 @@
     #check:checked ~ ul{
       left: 0;
     }
+    .mod{
+      margin-left: 46%;
+    } 
   }
   
   /*------------------------Dark mode--------------------------------------*/
@@ -148,7 +153,13 @@
   .fa-sun {
       color: #f39c12;
   }
+  nav.darknav {
 
+    background: #010911;
+
+    /*011428*/
+
+}
   /*-------------------Promena logoa----------------------*/
   .logo{
     margin: 3px 0px 0px 10px;
