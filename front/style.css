@@ -193,9 +193,8 @@
   margin: 0 auto;
   margin-top: 50px;
   background-color: #0082e6;
-
-  border-radius: 20px;
-  border: 3px solid #25237a;
+  /*border: 3px solid #25237a;*/
+  filter: drop-shadow(10px 10px 10px #0d2d4b);
   
 
   padding: 20px;
@@ -205,26 +204,26 @@
 .form-title {
   margin: 0;
   text-align: center;
-  color: #f7ba58;
+  color: #ceeaff;
   font-size: 35px;
 }
 
 .form-categ {
   margin: 0;
-  color:  #15154d;
+  color:  #ceeaff;
 }
 .form-1{
   margin: 10px 0px 5px 0px;
-  color:  #15154d;
+  color:  #ceeaff;
 }
 .tip1{
   font-size: 20px;
-  color: #15154d;
+  font-weight: bold;
+  color: #003566;
   padding: 5px;
-  background-color: #97d1fd;
-  border: 2px solid #25237a;
-  border-radius: 10px;
-  width: 200px;
+  background-color: #ceeaff;
+  border: 2px solid #003566;
+  width: 225px;
   margin: 0px;
 }
 .tip-div{
@@ -236,44 +235,41 @@
   margin: 10px 0px 0px 10px;
   width: 20px;
   height: 20px;
-  color: #97d1fd;
+  color: #ceeaff;
 }
 .sadrzaj{
-  background-color: #97d1fd;
-  color: #15154d;
+  background-color: #ceeaff;
+  color: #003566;
   font-size: 25px;
-  border-radius: 10px;
   padding: 5px;
-  border: 2px solid #25237a;
+  border: 2px solid #003566;
 }
 .vreme{
-  background-color: #97d1fd;
-  color: #15154d;
+  background-color: #ceeaff;
+  color: #003566;
+  font-weight: bold;
   font-size: 25px;
-  border-radius: 10px;
   padding: 5px;
-  border: 2px solid #25237a;
+  border: 2px solid #003566;
   width: flex;
 }
 .add-input {
   width: 100%;
   font-size: 25px;
-  border-radius: 10px;
   outline: none;
   padding: 5px;
-  background-color: #97d1fd;
-  border: 2px solid #25237a;
-  color: #25237a;
+  background-color: #ceeaff;
+  border: 2px solid #003566;
+  color: #003566;
 }
 
 .add-button {
   display: block;
-  width: 300px;
+  width: 250px;
   height: 60px;
 
   background-color:#0082e6 ;
-  border-radius: 10px;
-  border: 5px solid #15154d;
+  border: 5px solid #ceeaff;
   outline: none;
 
   font-size: 25px ;
@@ -283,13 +279,13 @@
   margin-bottom: 10px;
   padding: 5px;
   
-  color: #15154d;
+  color: #ceeaff;
 
   transition: all 0.25s ease;
 }
 
 .add-button:hover {
-  background-color:#15154d;
+  background-color:#ceeaff;
   color: #0082e6;
 }
 
