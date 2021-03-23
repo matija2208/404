@@ -9,7 +9,99 @@
     <link rel="shortcut icon" type="image/x-icon" href="../img/404LogoLopta.ico">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     
+    <!--VALIDACIJA SHORTCUT-->
+    <script language="javascript">
+      function validiraj(){
+        validiraj_sport();
+        validiraj_ime();
+        validiraj_tel();
+        validiraj_mail();
+        validiraj_pass();
+      }
+
+    //REGEX VALIDACIJA ZA SPORT
+      function validiraj_sport(){
+
+        var pattern = /^[A-Za-z]{1,30}$/;
+        var tekst = document.getElementById("forma").sport_input.value;
+        var test = tekst.match(pattern);
+
+        if (test == null) {
+          document.getElementById("sport_error").classList.remove("hidden");
+      } else{
+        console.log("validiran sport");
+        document.getElementById("sport_error").classList.add("hidden");
+      }
+
+    }
+
+    //REGEX VALIDACIJA ZA IME
+      function validiraj_ime(){
+
+        var pattern = /^[A-Za-z ]{1,75}$/;
+        var tekst = document.getElementById("forma").ime_input.value;
+        var test = tekst.match(pattern);
+
+        if (test == null) {
+          document.getElementById("ime_error").classList.remove("hidden");
+      } else{
+        console.log("validirano ime");
+        document.getElementById("ime_error").classList.add("hidden");
+      }
+
+    }
+
+    //REGEX VALIDACIJA ZA TELEFON
+      function validiraj_tel(){
+
+        var pattern = /^[0-9]{9,10}$/;
+        var tekst = document.getElementById("forma").tel_input.value;
+        var test = tekst.match(pattern);
+
+        if (test == null) {
+          document.getElementById("tel_error").classList.remove("hidden");
+      } else{
+        console.log("validiran tel");
+        document.getElementById("tel_error").classList.add("hidden");
+      }
+
+    }
+
+    //REGEX VALIDACIJA ZA MAIL
+      function validiraj_mail(){
+
+        var pattern = /^[a-zA-Z0-9]+@[a-z]{2,10}\.[a-z]{2,4}$/;
+        var tekst = document.getElementById("forma").mail_input.value;
+        var test = tekst.match(pattern);
+
+        if (test == null) {
+          document.getElementById("mail_error").classList.remove("hidden");
+      } else{
+        console.log("validiran mail");
+        document.getElementById("mail_error").classList.add("hidden");
+      }
+
+    }
+
+    //REGEX VALIDACIJA ZA PASS
+      function validiraj_pass(){
+
+        var pattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+        var tekst = document.getElementById("forma").pass_input.value;
+        var test = tekst.match(pattern);
+
+        if (test == null) {
+          document.getElementById("pass_error").classList.remove("hidden");
+      } else{
+        console.log("validiran pass");
+        document.getElementById("pass_error").classList.add("hidden");
+      }
+
+    }
+    </script>
+
 </head>
+
 <body>
   <!--Nav bar-->
     <nav id="navbar">
@@ -44,71 +136,83 @@
       </nav>
       <section>
         
-        <div class="form" id="forma">
+        <div class="forma" id="formaDiv">
+          <form id="forma">
             <h1 class="form-title">NOVI DOGAĐAJ</h1>
-            <h2 class="form-1">SPORT(ime):</h2>
-            <input class="add-input" id="ime-input" type="text" />
-            <p class="valid-error hidden" id="ime-error">Neki error</p>
-            <h2 class="form-1">TIP:</h2>
+            <h2 class="form-1">IME SPORTA:</h2>
 
-        <form>
+            <!-- INPUT SPORTA -->
+            <input class="add-input" id="sport_input" type="text" placeholder="Ime sporta koji će se održati:" />
+            <p class="valid-error hidden" id="sport_error">Ime sporta moze sadrzati samo slova.</p>
+
+            <!--INPUT ZA BIRANJE TIPOVA RADIO-->
+            <h2 class="form-1">VRSTA DOGAĐAJA:</h2>
+          
            <div class="tip-div"> 
             <p class="tip1">UTAKMICA</p>
             <input type="radio" name="gender" class="tip" value="utakmica"><br><br>
            </div>
+
            <br>
            <div class="tip-div">
             <p class="tip1">TURNIR</p>
             <input type="radio" name="gender" class="tip" value="turnir"><br><br>
            </div>
+
            <br>
            <div class="tip-div">
             <p class="tip1">PRIJATELJSKI MEČ</p>
             <input type="radio" name="gender" class="tip" value="prijateljski meč"><br><br>
            </div>
-        </form>
+        
         <h2 class="form-1">PODACI:</h2>
-        <h3 class="form-categ">datum:</h3>
+
+        <!--INPUT ZA DATUM-->
+        <h3 class="form-categ">Datum:</h3>
         <input type="date" class="vreme" />
-        <h3 class="form-categ">vreme:</h3>
+
+        <!--INPUT ZA VREME-->
+        <h3 class="form-categ">Vreme:</h3>
         <input type="time" class="vreme" />
-        <p class="valid-error hidden" id="ime-error">Neki error</p>
-        <h3 class="form-categ">lokacija:</h3>
-        <input class="add-input" id="ime-input" type="text" />
-        <p class="valid-error hidden" id="ime-error">Neki error</p>
-        <h3 class="form-categ">dodatne informacije:</h3>
+
+        <!--INPUT ZA LOKACIJU-->
+        <h3 class="form-categ">Mesto:</h3>
+        <input class="add-input" id="lokacija_input" type="text" placeholder="Mesto gde će se održati događaj:" />
+        
+        <!--INPUT ZA SADRZAJ-->
+        <h3 class="form-categ">Dodatne informacije:</h3>
            <div class="sadrzaj" contenteditable></div>
             
             <h2 class="form-1">KONTAKT:</h2>
-            <h3 class="form-categ">ime:</h3>
-            <input class="add-input" id="ime-input" type="text" />
-            <p class="valid-error hidden" id="ime-error">Neki error</p>
-            <h3 class="form-categ">tel:</h3>
-            <input class="add-input" id="ime-input" type="tel" />
-            <p class="valid-error hidden" id="ime-error">Neki error</p>
-            <h3 class="form-categ">e-mail @:</h3>
-            <input class="add-input" id="ime-input" type="email" />
-            <p class="valid-error hidden" id="ime-error">Neki error</p>
 
-            <h3 class="form-categ">lozinka:</h3>
-            <input class="add-input" id="ime-input" type="password" />
-            <p class="valid-error hidden" id="ime-error">Neki error</p>
+            <h3 class="form-categ">Ime i prezime:</h3>
+
+            <!--INPUT ZA IME-->
+            <input class="add-input" id="ime_input" type="text" placeholder="Vase ime i prezime:" />
+            <p class="valid-error hidden" id="ime_error">Ime sme sadrzati samo slova.</p>
+
+            <!--INPUT ZA TELEFON-->
+            <h3 class="form-categ">Broj telefona:</h3>
+            <input class="add-input" id="tel_input" type="tel" placeholder="Broj telefona organizatora:" />
+            <p class="valid-error hidden" id="tel_error">Broj telefona mora biti spojeni niz koji sadrzi samo brojeve (npr. 0631234567).</p>
+
+            <!--INPUT ZA MAIL-->
+            <h3 class="form-categ">E-Mail adresa:</h3>
+            <input class="add-input" id="mail_input" type="email" placeholder="Adresa E-Pošte organizatora:" />
+            <p class="valid-error hidden" id="mail_error">E-Mail adresa mora sadrzati validnu adresu (example@[mail].com)</p>
+
+            <!--INPUT ZA LOZINKU-->
+            <h3 class="form-categ">Lozinka:</h3>
+            <input class="add-input" id="pass_input" type="password" placeholder="Lozinka objave, lozinka mora sadržati više od 6 slova, barem jedan broj i barem jedno slovo:" />
+            <p class="valid-error hidden" id="pass_error">Lozinka mora sadrzati vise od 6 slova i mora sadrzati barem jedan broj i jedno slovo.</p>
 
           
-            <button class="add-button" id="dodajobjavu">DODAJ OBJAVU</button>
+            <input type="button" class="add-button" id="dodajobjavu" value="DODAJ OBJAVU" onclick="validiraj()" ></input>
+          </form>
         </div>
     </section>
 
-  
-
-
-
-
-
-
-
-
-
+    <!--SCRIPT IMPORT-->
       <script src="app.js"></script>
 </body>
 </html>

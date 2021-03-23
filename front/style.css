@@ -226,7 +226,7 @@
     opacity:0;
   }
 /*-------------------OBJAVA------------------------------*/
-.form {
+.forma {
   width: 70%;
   margin: 0 auto;
   margin-top: 50px;
@@ -250,6 +250,7 @@
   margin: 0;
   color:  #ceeaff;
 }
+
 .form-1{
   margin: 10px 0px 5px 0px;
   color:  #ceeaff;
@@ -276,6 +277,7 @@
   color: #ceeaff;
 }
 .sadrzaj{
+  overflow-y: scroll;
   background-color: #ceeaff;
   color: #003566;
   font-size: 25px;
@@ -310,6 +312,7 @@
   border: 5px solid #ceeaff;
   outline: none;
 
+  text-align: center;
   font-size: 25px ;
   font-weight: 800;
   margin: 0 auto;
@@ -331,9 +334,10 @@
   margin: 0;
   margin-top: 5px;
   margin-bottom: 2px;
-  font-size: 12px;
+  font-weight: bold;
+  font-size: 20px;
   font-style: italic;
-  color: red;
+  color: #f39c12;
 }
 
 .hidden {
