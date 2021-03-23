@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sajt</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/404LogoLopta.ico">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    
+</head>
+<body>
+  <!--Nav bar-->
+    <nav id="navbar">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <a href="index.html">
+            <div id="logo">
+                <img class="logo3" src="../img/404LogoDark.png" alt="404!" width="auto" height="70px"/>
+                <img class="logo2" src="../img/404LogoOrange.png" alt="404!" width="auto" height="70px"/>
+                <img class="logo" src="../img/404Logo.png" alt="404!" width="auto" height="70px" />
+            </div>
+       </a>
+        <ul>
+          <b>
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="Novosti.html">Novosti</a></li>
+          <li><a href="Događanja.html">Događanja</a></li>
+          <li><a class="active" href="objavi.html">Objavi</a></li>  </b>
+          <li>
+            <!--Dark mode-->
+            <div class="mod">
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <div class="ball"></div>
+            </label>
+          </div></li>
+        </ul>
+      </nav>
+      <section>
+        
+        <div class="form">
+            <h1 class="form-title">NOVI DOGAĐAJ</h1>
+            <h2 class="form-1">SPORT(ime):</h2>
+            <input class="add-input" id="ime-input" type="text" />
+            <p class="valid-error hidden" id="ime-error">Neki error</p>
+            <h2 class="form-1">TIP:</h2>
+
+        <form>
+           <div class="tip-div"> 
+            <p class="tip1">UTAKMICA</p>
+            <input type="radio" name="gender" class="tip" value="utakmica"><br><br>
+           </div>
+           <br>
+           <div class="tip-div">
+            <p class="tip1">TURNIR</p>
+            <input type="radio" name="gender" class="tip" value="turnir"><br><br>
+           </div>
+           <br>
+           <div class="tip-div">
+            <p class="tip1">PRIJATELJSKI MEČ</p>
+            <input type="radio" name="gender" class="tip" value="prijateljski meč"><br><br>
+           </div>
+        </form>
+        <h2 class="form-1">PODACI:</h2>
+        <h3 class="form-categ">datum i vreme:</h3>
+        <input type="datetime-local" class="vreme" />
+        <p class="valid-error hidden" id="ime-error">Neki error</p>
+        <h3 class="form-categ">lokacija:</h3>
+        <input class="add-input" id="ime-input" type="text" />
+        <p class="valid-error hidden" id="ime-error">Neki error</p>
+        <h3 class="form-categ">dodatne informacije:</h3>
+           <div class="sadrzaj" contenteditable></div>
+            
+            <h2 class="form-1">KONTAKT:</h2>
+            <h3 class="form-categ">ime:</h3>
+            <input class="add-input" id="ime-input" type="text" />
+            <p class="valid-error hidden" id="ime-error">Neki error</p>
+            <h3 class="form-categ">tel:</h3>
+            <input class="add-input" id="ime-input" type="text" />
+            <p class="valid-error hidden" id="ime-error">Neki error</p>
+            <h3 class="form-categ">e-mail @:</h3>
+            <input class="add-input" id="ime-input" type="text" />
+            <p class="valid-error hidden" id="ime-error">Neki error</p>
+
+            <h3 class="form-categ">lozinka:</h3>
+            <input class="add-input" id="ime-input" type="password" />
+            <p class="valid-error hidden" id="ime-error">Neki error</p>
+
+          
+            <button class="add-button">DODAJ OBJAVU</button>
+        </div>
+    </section>
+
+  
+
+
+
+
+
+
+
+
+
+      <script src="app.js"></script>
+</body>
+</html>

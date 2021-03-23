@@ -187,5 +187,121 @@
   #logo img.logo:hover {
     opacity:0;
   }
+/*-------------------OBJAVA------------------------------*/
+.form {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: #0082e6;
 
+  border-radius: 20px;
+  border: 3px solid #25237a;
+  
+
+  padding: 20px;
+  
+}
+
+.form-title {
+  margin: 0;
+  text-align: center;
+  color: #25237a;
+  font-size: 35px;
+}
+
+.form-categ {
+  margin: 0;
+  color:  #15154d;
+}
+.form-1{
+  margin: 10px 0px 5px 0px;
+  color:  #15154d;
+}
+.tip1{
+  font-size: 20px;
+  color: #15154d;
+  padding: 5px;
+  background-color: #97d1fd;
+  border: 2px solid #25237a;
+  border-radius: 10px;
+  width: 200px;
+  margin: 0px;
+}
+.tip-div{
+  display: inline-flex;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.tip{
+  margin: 10px 0px 0px 10px;
+  width: 20px;
+  height: 20px;
+  color: #97d1fd;
+}
+.sadrzaj{
+  background-color: #97d1fd;
+  color: #15154d;
+  font-size: 25px;
+  border-radius: 10px;
+  padding: 5px;
+  border: 2px solid #25237a;
+}
+.vreme{
+  background-color: #97d1fd;
+  color: #15154d;
+  font-size: 25px;
+  border-radius: 10px;
+  padding: 5px;
+  border: 2px solid #25237a;
+}
+.add-input {
+  width: 100%;
+  font-size: 25px;
+  border-radius: 10px;
+  outline: none;
+  padding: 5px;
+  background-color: #97d1fd;
+  border: 2px solid #25237a;
+  color: #25237a;
+}
+
+.add-button {
+  display: block;
+  width: 300px;
+  height: 60px;
+
+  background-color:#0082e6 ;
+  border-radius: 10px;
+  border: 5px solid #15154d;
+  outline: none;
+
+  font-size: 25px ;
+  font-weight: 800;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 5px;
+  
+  color: #15154d;
+
+  transition: all 0.25s ease;
+}
+
+.add-button:hover {
+  background-color:#15154d;
+  color: #0082e6;
+}
+
+.valid-error {
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 2px;
+  font-size: 12px;
+  font-style: italic;
+  color: red;
+}
+
+.hidden {
+  font-size: 0px !important;
+}
   
