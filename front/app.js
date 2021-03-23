@@ -5,6 +5,12 @@ const chk = document.getElementById('chk');
           document.body.classList.toggle('dark');
 
           document.getElementById("navbar").classList.toggle('darknav');
+        
+          document.getElementById("forma").classList.toggle('form');
+          document.getElementById("forma").classList.toggle('darkforma');
+
+          document.getElementById("dodajobjavu").classList.toggle('darkadd-button');
+          document.getElementById("dodajobjavu").classList.toggle('add-button');
 
         });
 /*---------------------objava----------------*/

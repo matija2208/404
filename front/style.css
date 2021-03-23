@@ -154,13 +154,51 @@
   .fa-sun {
       color: #f39c12;
   }
+
   nav.darknav {
 
     background: #010911;
 
     /*011428*/
 
-}
+  }
+
+  .darkforma {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: #010911;
+  /*border: 3px solid #25237a;*/
+  filter: drop-shadow(10px 10px 10px #0d2d4b);
+  padding: 20px;
+  }
+
+  .darkadd-button {
+    display: block;
+    width: 250px;
+    height: 60px;
+  
+    background-color:#010911 ;
+    border: 5px solid #ceeaff;
+    outline: none;
+  
+    font-size: 25px ;
+    font-weight: 800;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 5px;
+    
+    color: #ceeaff;
+  
+    transition: all 0.25s ease;
+  }
+
+  .darkadd-button:hover {
+    background-color:#ceeaff;
+    color: #010911;
+  }
+
   /*-------------------Promena logoa----------------------*/
   .logo{
     margin: 3px 0px 0px 10px;
