@@ -205,7 +205,7 @@
     color: #010911;
   }
 
-  /*-------------------Promena logoa----------------------*/
+  /*----------------------------------Promena logoa---------------------------------------*/
   .logo{
     margin: 3px 0px 0px 10px;
   }
@@ -231,7 +231,7 @@
   #logo img.logo:hover {
     opacity:0;
   }
-/*-------------------OBJAVA------------------------------*/
+/*-------------------------------------OBJAVA----------------------------------*/
 .forma {
   width: 70%;
   margin: 0 auto;
@@ -350,16 +350,18 @@
   font-size: 0px !important;
 }
   
-/*----------------------Događanja----------------------*/
+/*---------------------------------Događanja-----------------------------*/
+
+.objave{
+  display: inline-block;
+}
 
 .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 5px;
-  height: 400px;
-  color: black;
-  margin: 0px 0px 0px 15px;
+  height: 350px;
 }
 
 .card-container {
@@ -367,27 +369,56 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
   background-color: white;
   background-image: url("../img/404LogoLopta.png");
   background-repeat: no-repeat;
   background-position: left top;
+
   text-align: center;
-  margin-bottom: 40px;
-  border-radius: 20px;
-  border: 5px solid #003566;
-  
   transition: transform 0.3s ease;
 
+  border: 5px solid #003566;
+  border-radius: 20px;
+  margin: 0px 0px 40px 15px;
 }
 
-.card-container:hover {
-  transform: translateY(-10px);
-}
 .naslov{
   display: inline-flex;
   margin-left: 0;
   margin-right: auto;
 }
+
+.sport{
+  color:#003566;
+  font-size: 30px;
+  text-align: center;
+  margin: 10px;
+}
+
+.vrsta{
+  font-size: 20px;
+  margin: 10px 0px 0px 0px;
+  color:#003566;
+}
+.vrsta2{
+  font-size: 25px;
+  font-weight: bold;
+  color:#003566;
+  margin: 0px 0px 10px 0px;
+}
+.vrsta3{
+  font-size: 20px;
+  font-weight: bold;
+  color:#003566;
+  margin: 0px 0px 30px 0px;
+}
+
+
+.card-container:hover {
+  transform: translateY(-10px);
+}
+
 .user-icon {
   display: block;
   margin-left: 0;
@@ -401,9 +432,6 @@
   text-align: center;
   margin: 10px;
   font-size: 30px;
-}
-.user-info > * {
-  margin: 0;
 }
 
 .user-info {
@@ -450,25 +478,7 @@
 .delete-button:hover {
   background-color: red;
 }
-.objave{
-  display: inline-block;
-}
 
 
-.vrsta{
-  font-size: 20px;
-  margin: 10px 0px 0px 0px;
-  color:#003566;
-}
-.vrsta2{
-  font-size: 25px;
-  font-weight: bold;
-  color:#003566;
-  margin: 0px 0px 10px 0px;
-}
-.vrsta3{
-  font-size: 20px;
-  font-weight: bold;
-  color:#003566;
-  margin: 0px 0px 30px 0px;
-}
+
+
