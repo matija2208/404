@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const connect_baza = require("./baza/baza");
 const post = require("./baza/post");
-
+const cors=require("cors");
 const PORT = 3000;
 
 app.listen(PORT, () => {
@@ -14,7 +14,7 @@ connect_baza();
 
 // Sa JSON
 app.use(express.json());
-
+app.use(cors());
 app.get("/api/posts", async function(req,res){
     try{
         const all_posts = await post.find();
