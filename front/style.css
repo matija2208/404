@@ -354,6 +354,7 @@
 
 .objave{
   display: inline-block;
+  margin: 0px 0px 40px 15px;
   height: 350px;
   width: 300px;
 } 
@@ -474,12 +475,41 @@
 /*-------------------------------pocetna-------------------------------------*/
 
 .pocetna{
-  background-image: url("../img/pocetna3.jpg");
+  background-image: url("../img/pocetna6.jpg");
   height:100%;  
-  padding:0px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top;
-  
+}
+
+/*---------------------------------------------------------------------------*/
+.onama{
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  background-color: #0082e6;
+  filter: drop-shadow(10px 10px 10px #0d2d4b);
+
+  padding: 20px;
+}
+.onama-h1{
+  text-align: center;
+  color:#f39c12;
+}
+.onama-p{
+  text-align: left;
+  color: #0082e6;
+  font-size: 20px;
+}
+
+.div-text{
+  background-color: #ceeaff;
+  border: 5px solid #f39c12;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 500px;
+  padding: 30px;
 }

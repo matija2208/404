@@ -13,3 +13,5 @@ const chk = document.getElementById('chk');
           document.getElementById("dodajobjavu").classList.toggle('add-button');
 
         });
+        
+/*-------------------------------------------------------------------------------*/

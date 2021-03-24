@@ -15,6 +15,7 @@ connect_baza();
 // Sa JSON
 app.use(express.json());
 app.use(cors());
+
 app.get("/api/posts", async function(req,res){
     try{
         const all_posts = await post.find();
@@ -120,3 +121,5 @@ app.post("/api/posts/:id/edit", async function(req,res){
         });
     }
 });
+
+
