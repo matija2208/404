@@ -350,3 +350,88 @@
   font-size: 0px !important;
 }
   
+/*-----------------Događanja-------------*/
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 40px;
+  height: 500px;
+  color: black;
+}
+
+.card-container {
+  flex: 0 0 300px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  text-align: center;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  border: 5px solid #003566;
+
+  transition: transform 0.3s ease;
+}
+
+.card-container:hover {
+  transform: translateY(-10px);
+}
+
+.user-icon {
+  width: 200px;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  border-bottom: 3px solid #003566;
+}
+
+.user-info > * {
+  margin: 0;
+}
+
+.user-info {
+  margin-bottom: 20px;
+}
+
+.user-button {
+  width: 60%;
+  height: 40px;
+
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid #003566;
+  outline: none;
+
+  font-weight: bold;
+
+  margin-bottom: 10px;
+
+  transition: all 0.25s ease;
+}
+
+.user-button:hover {
+  background-color: #003566;
+  color: white;
+}
+
+.delete-button {
+  height: 40px;
+  width: 40px;
+  background-color: tomato;
+  border-radius: 20%;
+  border: none;
+  outline: none;
+
+  position: relative;
+  margin-top: -350px;
+
+  transition: all 0.25s ease;
+}
+
+.delete-button:hover {
+  background-color: red;
+}
+.objave{
+  display: inline-block;
+}
