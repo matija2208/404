@@ -18,7 +18,7 @@ const KontaktSchema=new mongoose.Schema({
     },
 });
 
-const InfoSchema=new mongoose.SchemaType({
+const InfoSchema=new mongoose.Schema({
     mesto:{
         type:String,
         trim:true,
@@ -56,8 +56,9 @@ const PostSchema=new mongoose.Schema({
         trim:true,
         required:true,
     },
-    kontakt:KontaktSchema,
+    
     info:InfoSchema,
+    kontakt:KontaktSchema,
 });
 
 module.exports=mongoose.model("post", PostSchema);
