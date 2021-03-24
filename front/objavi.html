@@ -22,7 +22,7 @@
     //REGEX VALIDACIJA ZA SPORT
       function validiraj_sport(){
 
-        var pattern = /^[A-Za-z]{1,30}$/;
+        var pattern = /^[A-Za-z ]{1,30}$/;
         var tekst = document.getElementById("forma").sport_input.value;
         var test = tekst.match(pattern);
 
@@ -54,7 +54,7 @@
     //REGEX VALIDACIJA ZA TELEFON
       function validiraj_tel(){
 
-        var pattern = /^[0-9]{9,10}$/;
+        var pattern = /^[0-9+]{9,15}$/;
         var tekst = document.getElementById("forma").tel_input.value;
         var test = tekst.match(pattern);
 
