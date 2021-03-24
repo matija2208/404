@@ -1,7 +1,12 @@
 GetData();
-
+var IDs=[String];
+var counter=0;
+var POSTS=[Object];
 function CreateCard(post) {
-
+    IDs.push(post._id);
+    console.log(IDs.length);
+    console.log(IDs[IDs.length-1]);
+    POSTS.push(post);
     let card = `
     <section class="objave">
         <div class="cards">
@@ -24,11 +29,11 @@ function CreateCard(post) {
                     <p class="vrsta3">${post.info.mesto}</p>
                 </div>
                 <button class="user-button">PRIKAZI VISE</button>
-                <button class="delete-button">🗑️</button>
+                <button class="delete-button" id="${counter}" onClick = "obrisi(this.id)">🗑️</button>
             </div> 
         </div>
     </section>`;
-
+    counter++;
     return card;
 }
 
@@ -53,3 +58,19 @@ async function GetData() {
     }
 }
 
+async function obrisi(id)
+{
+    var loz = prompt("Unesite lozinku za objavu : ");
+    if(loz==POSTS[Number(id)+1].lozinka)
+    {
+        let idstring=`http://localhost:3000/api/posts/`+(IDs[Number(id)+1]);
+        console.log(IDs[(Number(id))+1]);
+        console.log(idstring);
+        const res = await axios.delete(idstring);
+        console.log(res);
+        counter=0;
+        IDs=[String];
+        GetData();
+    }
+    
+}

@@ -9,14 +9,37 @@
     <link rel="shortcut icon" type="image/x-icon" href="../img/404LogoLoptablue.ico">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     
-    <!--VALIDACIJA SHORTCUT-->
+    <!--JAVASCRIPT-->
     <script language="javascript">
+      var valid_test;
+
+      //PROVERA OTHER
+      function other_select(){
+        var izbor = document.getElementById("sport_select").value;
+        if (izbor == 'Drugo'){
+          document.getElementById("sport_input").type = "text";
+        } else
+        document.getElementById("sport_input").type = "hidden";
+      }
+
+      //VALIDACIJA SHORTCUT
       function validiraj(){
-        validiraj_sport();
+        valid_test=true;
+
+        if (document.getElementById("sport_select").value == 'Drugo'){
+          validiraj_sport();
+        }
+
         validiraj_ime();
         validiraj_tel();
         validiraj_mail();
         validiraj_pass();
+
+        if(valid_test == true){
+          console.log("Post se objavljuje");
+        } else{
+          console.log("Post se ne objavljuje");
+        }
       }
 
     //REGEX VALIDACIJA ZA SPORT
@@ -28,11 +51,11 @@
 
         if (test == null) {
           document.getElementById("sport_error").classList.remove("hidden");
+          valid_test = false;
       } else{
         console.log("validiran sport");
         document.getElementById("sport_error").classList.add("hidden");
       }
-
     }
 
     //REGEX VALIDACIJA ZA IME
@@ -44,11 +67,11 @@
 
         if (test == null) {
           document.getElementById("ime_error").classList.remove("hidden");
+          valid_test = false;
       } else{
         console.log("validirano ime");
         document.getElementById("ime_error").classList.add("hidden");
       }
-
     }
 
     //REGEX VALIDACIJA ZA TELEFON
@@ -60,11 +83,11 @@
 
         if (test == null) {
           document.getElementById("tel_error").classList.remove("hidden");
+          valid_test = false;
       } else{
         console.log("validiran tel");
         document.getElementById("tel_error").classList.add("hidden");
       }
-
     }
 
     //REGEX VALIDACIJA ZA MAIL
@@ -76,11 +99,11 @@
 
         if (test == null) {
           document.getElementById("mail_error").classList.remove("hidden");
+          valid_test = false;
       } else{
         console.log("validiran mail");
         document.getElementById("mail_error").classList.add("hidden");
       }
-
     }
 
     //REGEX VALIDACIJA ZA PASS
@@ -92,11 +115,11 @@
 
         if (test == null) {
           document.getElementById("pass_error").classList.remove("hidden");
+          valid_test = false;
       } else{
         console.log("validiran pass");
         document.getElementById("pass_error").classList.add("hidden");
       }
-
     }
     </script>
 
@@ -139,14 +162,9 @@
         <div class="forma" id="formaDiv">
           <form id="forma">
             <h1 class="form-title">NOVI DOGAĐAJ</h1><br><br>
-  
-            <!-- INPUT SPORTA 
-            <input class="add-input" id="sport_input" type="text" placeholder="Ime sporta koji će se održati:" />
-            <p class="valid-error hidden" id="sport_error">Ime sporta moze sadrzati samo slova.</p>
-            -->
 
             <h2 class="form-1">SPORT :</h2>
-            <select class="vreme">
+            <select class="vreme" id="sport_select" onchange="other_select()">
               <option>Fudbal</option>
               <option>Košarka</option>
               <option>Rukomet</option>
@@ -160,6 +178,9 @@
               <option>Workout</option>
               <option>Drugo</option>
             </select>
+            <!-- INPUT SPORTA -->
+            <input class="add-input" id="sport_input" type="hidden" placeholder="Ime sporta koji će se održati:" />
+            <p class="valid-error hidden" id="sport_error">Ime sporta moze sadrzati samo slova.</p>
 
 
             <!--INPUT ZA BIRANJE TIPOVA RADIO-->
@@ -181,7 +202,7 @@
             <p class="tip1">PRIJATELJSKI MEČ</p>
             <input type="radio" name="gender" class="tip" value="prijateljski meč"><br><br>
            </div>
-        
+
         <h2 class="form-1">PODACI:</h2>
 
         <!--INPUT ZA DATUM-->
@@ -195,7 +216,7 @@
         <!--INPUT ZA LOKACIJU-->
         <h3 class="form-categ">Mesto:</h3>
         <input class="add-input" id="lokacija_input" type="text" placeholder="Mesto gde će se održati događaj:" />
-        
+
         <!--INPUT ZA SADRZAJ-->
         <h3 class="form-categ">Dodatne informacije:</h3>
            <div class="sadrzaj" contenteditable></div>
