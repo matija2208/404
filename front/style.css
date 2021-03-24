@@ -12,6 +12,8 @@
     height: 100vh;
     margin: 0;
     transition: background 0.3s linear;
+   
+
   }
   /*------------------------------Nav bar----------------------------------------------*/
   nav{
@@ -352,7 +354,10 @@
 
 .objave{
   display: inline-block;
-}
+  margin: margin: 0px 0px 40px 15px;
+  height: 350px;
+  width: 300px;
+} 
 
 .cards {
   display: flex;
@@ -378,7 +383,6 @@
 
   border: 5px solid #003566;
   border-radius: 20px;
-  margin: 0px 0px 40px 15px;
 }
 
 .naslov{
@@ -468,7 +472,15 @@
 .delete-button:hover {
   background-color: red;
 }
+/*-------------------------------pocetna-------------------------------------*/
 
-
-
-
+.pocetna{
+  background-image: url("../img/pocetna3.jpg");
+  height:100%;  
+  padding:0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  
+}
