@@ -350,15 +350,16 @@
   font-size: 0px !important;
 }
   
-/*-----------------Događanja-------------*/
+/*----------------------Događanja----------------------*/
 
 .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 40px;
-  height: 500px;
+  padding: 5px;
+  height: 400px;
   color: black;
+  margin: 0px 0px 0px 15px;
 }
 
 .card-container {
@@ -367,25 +368,40 @@
   align-items: center;
   flex-direction: column;
   background-color: white;
+  background-image: url("../img/404LogoLopta.png");
+  background-repeat: no-repeat;
+  background-position: left top;
   text-align: center;
   margin-bottom: 40px;
   border-radius: 20px;
   border: 5px solid #003566;
-
+  
   transition: transform 0.3s ease;
+
 }
 
 .card-container:hover {
   transform: translateY(-10px);
 }
-
+.naslov{
+  display: inline-flex;
+  margin-left: 0;
+  margin-right: auto;
+}
 .user-icon {
-  width: 200px;
+  display: block;
+  margin-left: 0;
+  margin-right: 5px;
+  width: 50px;
   padding-bottom: 5px;
   padding-top: 10px;
-  border-bottom: 3px solid #003566;
 }
-
+.sport{
+  color:#003566;
+  text-align: center;
+  margin: 10px;
+  font-size: 30px;
+}
 .user-info > * {
   margin: 0;
 }
@@ -398,15 +414,17 @@
   width: 60%;
   height: 40px;
 
+  color:#003566;
+
   background-color: white;
   border-radius: 10px;
   border: 2px solid #003566;
   outline: none;
 
-  font-weight: bold;
+  font-weight: 800;
 
   margin-bottom: 10px;
-
+  
   transition: all 0.25s ease;
 }
 
@@ -434,4 +452,23 @@
 }
 .objave{
   display: inline-block;
+}
+
+
+.vrsta{
+  font-size: 20px;
+  margin: 10px 0px 0px 0px;
+  color:#003566;
+}
+.vrsta2{
+  font-size: 25px;
+  font-weight: bold;
+  color:#003566;
+  margin: 0px 0px 10px 0px;
+}
+.vrsta3{
+  font-size: 20px;
+  font-weight: bold;
+  color:#003566;
+  margin: 0px 0px 30px 0px;
 }
