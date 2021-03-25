@@ -670,3 +670,8 @@
   
   transition: all 0.25s ease;
 }
+
+.nazad:hover{
+  background-color: #003566;
+  color: white;
+}
