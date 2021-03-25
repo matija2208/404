@@ -472,6 +472,25 @@
 }
 
 /*---------------------------POCETNA STRANA-------------------------------------*/
+.index-naslov{
+  text-align: center;
+  margin-top: 5px;
+  color:#0082e6;
+  font-weight: bold;
+  font-size: 50px;
+}
+.index-naslov:hover{
+  transform: translateY(-10px);
+}
+.index-p{
+  color:#0082e6;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
 .wrapper {
   width: 100%;
   overflow: hidden; 
@@ -598,7 +617,7 @@
   height: 500px;
   padding: 30px;
   word-wrap: break-word;
-  opacity: 30%;
+  opacity: 70%;
 }
 
 /*-----------------------------SAYNAJ VISE----------------------------------------*/
