@@ -82,11 +82,26 @@ function vidi_jos(id)
     let currentPost=POSTS[(Number(id)+1)];
     var tekst=
     `<div class="vise">
-    <br><br>
-    <h1 class="vise-h1">${currentPost.sport}</h1><br><br>
-    <div class="vise-text">
-      <p class="vise-p">${currentPost.sadrzaj}</p>
-    </div>
- </div>`
+        <br><br>
+        <h1 class="vise-h1">${currentPost.sport}</h1><br><br>
+        <div class="vise-text">
+          <p class="vise-p">Vrsta događaja: ${currentPost.sadrzaj}</p>
+          <p class="vise-p">Datum: </p>
+          <p class="vise-p">Vreme: </p>
+          <p class="vise-p">Mesto: </p>
+          <p class="vise-p">Dodatne informacije: </p><br><br>
+          <h2 class="vise-h2">Kontant: </h2><br>
+          <p class="vise-p">Ime i prezime: </p>
+          <p class="vise-p">Broj telefona: </p>
+          <p class="vise-p">E-Mail adresa: </p>
+        </div>
+        <button class="nazad" onClick="vidi_manje()">NAZAD</button> 
+    </div>`
     vidijos.innerHTML=tekst;
+}
+
+function vidi_manje(id)
+{
+    document.getElementById("jos").style.display="none";
+    document.getElementById("cards").style.display="flex";
 }
