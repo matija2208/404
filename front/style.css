@@ -13,13 +13,6 @@
     margin: 0;
     transition: background 0.3s linear;
   }
-  .bdy{
-    background-image: url("../img/pocetna5.jpeg"); 
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top;
-    height: 100%;
-  }
   /*------------------------------Nav bar----------------------------------------------*/
   nav{
     background: #0082e6;
@@ -238,7 +231,7 @@
   #logo img.logo:hover {
     opacity:0;
   }
-/*-------------------------------------OBJAVA----------------------------------*/
+/*-------------------------------------OBJAVI------------------------------------------*/
 .forma {
   width: 70%;
   margin: 0 auto;
@@ -355,7 +348,7 @@
   font-size: 0px !important;
 }
   
-/*---------------------------------Događanja-----------------------------*/
+/*-----------------------------------------Događanja---------------------------------------*/
 
 .objave{
   display: inline-block;
@@ -477,64 +470,8 @@
 .delete-button:hover {
   background-color: red;
 }
-/*-------------------------------pocetna-------------------------------------*/
 
-.pocetna{
-  background-image: url("../img/6.jpg");
-  height:100%;  
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top;
-}
-
-/*---------------------------------------------------------------------------*/
-
-
-.pozadina-onama{
-  background-image: url("../img/pocetna5.jpeg"); 
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top;
-  margin: 30px;
-}
-.tekst-onama{
-  background-color: #ceeaff;
-  border: 5px solid #f39c12;
-  margin: 100px 150px 100px 150px;
-}
-
-
-.onama{
-  align-items: center;
-  width: 70%;
-  margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: 100px;
-  background-color: #0082e6;
-  filter: drop-shadow(10px 10px 10px #0d2d4b);
-
-  padding: 20px;
-}
-.onama-h1{
-  text-align: center;
-  color:#f39c12;
-}
-.onama-p{
-  text-align: left;
-  color: #0082e6;
-  font-size: 20px;
-}
-
-.div-text{
-  background-color: #ceeaff;
-  border: 5px solid #f39c12;
-  margin-left: 10%;
-  margin-right: 10%;
-  height: 500px;
-  padding: 30px;
-}
-/*----------------------------------------------------*/
+/*---------------------------POCETNA STRANA-------------------------------------*/
 .wrapper {
   width: 100%;
   overflow: hidden; 
@@ -584,8 +521,6 @@
   right: 0;
 }
 
-/* Navigation Dots */
-
 .navigation-dots {
   display: flex;
   height: 32px;
@@ -607,4 +542,92 @@
 
 .single-dot.active {
   background: #eee;
+}
+/*-------------------------------O NAMA-------------------------------------*/
+.pozadina-onama{
+  background-image: url("../img/slike.png");
+  background-repeat: repeat-y ;
+  background-position: left top;
+}
+.onama{
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  background-color: #0082e6;
+  filter: drop-shadow(10px 10px 10px #0d2d4b);
+
+  padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+/*.pocetna{
+  background-image: url("../img/6.jpg");
+  height:100%;  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+}*/
+
+/*---------------------------------------------------------------------------*/
+
+
+/*.pozadina-onama{
+  background-image: url("../img/pocetna5.jpeg"); 
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  margin: 30px;
+}*/
+.tekst-onama{
+  background-color: #ceeaff;
+  border: 5px solid #f39c12;
+  margin: 100px 150px 100px 150px;
+}
+
+
+.onama{
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  background-color: #0082e6;
+  filter: drop-shadow(10px 10px 10px #0d2d4b);
+
+  padding: 20px;
+}
+.onama-h1{
+  text-align: center;
+  color:#f39c12;
+}
+.onama-p{
+  text-align: left;
+  color: #0082e6;
+  font-size: 20px;
+}
+
+.div-text{
+  background-color: #ceeaff;
+  border: 5px solid #f39c12;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 500px;
+  padding: 30px;
+}
+
+.vidijos{
+  height: 200px;
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
 }
