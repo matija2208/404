@@ -562,9 +562,13 @@
 .onama{
   float: center;
  /* width: 80%;*/
-  background-img:url;
+  background-image:  url("../img/onama.gif");
+  width: 100%;
   filter: drop-shadow(10px 10px 10px #0d2d4b);
   padding: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
 }
 
 .tekst-onama{
@@ -573,7 +577,12 @@
 }
 .onama-h1{
   text-align: center;
-  color: #ceeaff;
+  color: #fffafa;
+  font-size: 70px;
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-fill-color: #1b9bff;
+
+
 }
 .onama-p{
   text-align: left;
@@ -589,6 +598,7 @@
   height: 500px;
   padding: 30px;
   word-wrap: break-word;
+  opacity: 30%;
 }
 
 /*-----------------------------SAYNAJ VISE----------------------------------------*/
