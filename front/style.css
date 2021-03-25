@@ -545,89 +545,66 @@
 }
 /*-------------------------------O NAMA-------------------------------------*/
 .pozadina-onama{
-  background-image: url("../img/slike.png");
+  background-image: url("../img/1.png");
   background-repeat: repeat-y ;
-  background-position: left top;
+  background-position: top left;
+  position: top;
+  height: max-content;
+}
+
+.pozadina-onama2{
+    background-image: url("../img/1.png");
+    background-repeat: repeat-y ;
+    background-position: top right;
+    position: top;
+    padding: 50px 100px 50px 100px;
 }
 .onama{
-  align-items: center;
-  width: 70%;
-  margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: 100px;
+  float: center;
+ /* width: 80%;*/
   background-color: #0082e6;
   filter: drop-shadow(10px 10px 10px #0d2d4b);
-
   padding: 20px;
 }
 
-
-
-
-
-
-
-
-
-/*.pocetna{
-  background-image: url("../img/6.jpg");
-  height:100%;  
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top;
-}*/
-
-/*---------------------------------------------------------------------------*/
-
-
-/*.pozadina-onama{
-  background-image: url("../img/pocetna5.jpeg"); 
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top;
-  margin: 30px;
-}*/
 .tekst-onama{
   background-color: #ceeaff;
-  border: 5px solid #f39c12;
   margin: 100px 150px 100px 150px;
-}
-
-
-.onama{
-  align-items: center;
-  width: 70%;
-  margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: 100px;
-  background-color: #0082e6;
-  filter: drop-shadow(10px 10px 10px #0d2d4b);
-
-  padding: 20px;
 }
 .onama-h1{
   text-align: center;
-  color:#f39c12;
+  color: #ceeaff;
 }
 .onama-p{
   text-align: left;
   color: #0082e6;
   font-size: 20px;
 }
-
 .div-text{
   background-color: #ceeaff;
-  border: 5px solid #f39c12;
+  border: 5px solid #003566;
   margin-left: 10%;
   margin-right: 10%;
+  margin-top: 10px;
   height: 500px;
   padding: 30px;
 }
 
+/*-----------------------------SAYNAJ VISE----------------------------------------*/
 .vidijos{
   height: 200px;
   width: 500px;
   display: flex;
   flex-wrap: wrap;
+}
+.vise{
+
+}
+
+.vise-h1{
+
+}
+
+.vise-text{
+
 }
