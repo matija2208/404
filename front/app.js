@@ -18,6 +18,8 @@ const chk = document.getElementById('chk');
           try{document.getElementById("i-paragraf").classList.toggle('index-p');
           document.getElementById("i-paragraf").classList.toggle('index-p-dark');}catch(err){}
 
+          try{document.getElementById("footer").classList.toggle('foot');
+          document.getElementById("footer").classList.toggle('foot-dark');}catch(err){}
         });
         
 /*-------------------------------------------------------------------------------*/

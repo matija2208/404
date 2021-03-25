@@ -1,5 +1,4 @@
 var valid_test;
-var axios=
       //PROVERA OTHER
       function other_select(){
         var izbor = document.getElementById("sport_select").value;

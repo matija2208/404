@@ -654,13 +654,15 @@
 }
 
 .onama-p{
-  text-align: left;
+  padding-top: 25px;
+  text-align: center;
   color: #0082e6;
   font-size: 20px;
 }
 .div-text{
+  overflow: auto;
   background-color: #ceeaff;
-  border: 5px solid #0d2d4b;
+  border: 5px solid #1b9bff;
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 10px;
@@ -863,4 +865,25 @@
  border: 5px solid #fffafa;
  border-radius: 50%;
  margin-top: 10px;
+}
+
+/*footer*/
+.foot {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #1b9bff;
+  color: white;
+  text-align: center;
+}
+
+.foot-dark {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #010911;
+  color: white;
+  text-align: center;
 }
