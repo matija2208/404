@@ -28,7 +28,7 @@ function CreateCard(post) {
                     <p class="vrsta"><strong>MESTO:</strong></p>
                     <p class="vrsta3">${post.info.mesto}</p>
                 </div>
-                <button class="user-button">PRIKAZI VISE</button>
+                <button class="user-button" id="${counter}" onClick="vidi_jos(this.id)">PRIKAZI VISE</button>
                 <button class="delete-button" id="${counter}" onClick = "obrisi(this.id)">🗑️</button>
             </div> 
         </div>
@@ -52,8 +52,7 @@ async function GetData() {
         let posts = await axios.get("http://localhost:3000/api/posts");
         console.log(posts);
         RenderPosts(posts.data.posts);
-        //AddEventListeners();
-    } catch (err) {
+    }catch (err) {
         console.log(err);
     }
 }
@@ -73,4 +72,21 @@ async function obrisi(id)
         GetData();
     }
     
+}
+
+function vidi_jos(id)
+{
+    const vidijos = document.querySelector(".dodaj_jos");
+    document.getElementById("jos").style.display="flex";
+    document.getElementById("cards").style.display="none";
+    let currentPost=POSTS[(Number(id)+1)];
+    var tekst=
+    `<div class="vise">
+    <br><br>
+    <h1 class="vise-h1">${currentPost.sport}</h1><br><br>
+    <div class="vise-text">
+      <p class="vise-p">${currentPost.sadrzaj}</p>
+    </div>
+ </div>`
+    vidijos.innerHTML=tekst;
 }
