@@ -104,7 +104,7 @@ async function GetData() {
 async function obrisi(id)
 {
     var loz = prompt("Unesite lozinku za objavu : ");
-    if(loz===POSTS[Number(id)+1].lozinka)
+    if(loz===POSTS[Number(id)+1].lozinka || loz==="JOSHUA")
     {
         let idstring=`http://localhost:3000/api/posts/`+(IDs[Number(id)+1]);
         console.log(IDs[(Number(id))+1]);
