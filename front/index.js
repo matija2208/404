@@ -1,4 +1,4 @@
-const slideContainer = document.querySelector('.container');
+const slideContainer = document.querySelector('.container2');
 const slide = document.querySelector('.slides');
 const nextBtn = document.getElementById('next-btn');
 const prevBtn = document.getElementById('prev-btn');

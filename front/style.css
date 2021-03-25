@@ -718,7 +718,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-.container {
+.container2 {
   margin: 0 auto;
   width: 100%;
   height: auto;
@@ -767,4 +767,53 @@
   transform: translateY(-50%);
   font-size: 60px;
   color: white;
+}
+
+/*-----------------------------------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 23%;
+  padding: 10px;
+  width: 250px; 
+  margin: 5px;
+  border-color: #003566;
+  background-color: #1b9bff;
+  filter: drop-shadow(10px 10px 10px #0d2d4b);
+}
+
+.row_bitmoji {
+  content: "";
+  clear: both;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.Bitmoji_text{
+  text-align: center;
+  color: #fffafa;
+  font-size: 30px;
+}
+
+.Bitmoji_pasus{
+  text-align: center;
+  color: #fffafa;
+  font-size: 15px;
+}
+
+#avatar{
+ height: 150px;
+ width: 150px;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ border: 5px solid #fffafa;
+ border-radius: 50%;
+ margin-top: 10px;
 }
