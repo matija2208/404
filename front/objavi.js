@@ -158,5 +158,6 @@ var axios=
         catch(err){
             console.log(err);
         }
+        alert("Post vam je uspesno objavljen.");
         window.location.href = "dogadjaji.html";
       }

@@ -134,7 +134,7 @@ function vidi_jos(id)
           <p class="vise-p">Datum: ${currentPost.info.datum}</p>
           <p class="vise-p">Vreme: ${currentPost.info.vreme}</p>
           <p class="vise-p">Mesto: ${currentPost.info.mesto}</p>
-          <p class="vise-p">Dodatne informacije: ${currentPost.sadrzaj}</p><br><br>
+          <p class="vise-p-sadrzaj">Dodatne informacije: ${currentPost.sadrzaj}</p><br><br>
           <h2 class="vise-h2">Kontant:</h2><br>
           <p class="vise-p">Ime i prezime: ${currentPost.kontakt.ime}</p>
           <p class="vise-p">Broj telefona: ${currentPost.kontakt.telefon}</p>
