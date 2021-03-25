@@ -8,120 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/x-icon" href="../img/404LogoLoptablue.ico">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    
-    <!--JAVASCRIPT-->
-    <script language="javascript">
-      var valid_test;
-
-      //PROVERA OTHER
-      function other_select(){
-        var izbor = document.getElementById("sport_select").value;
-        if (izbor == 'Drugo'){
-          document.getElementById("sport_input").type = "text";
-        } else
-        document.getElementById("sport_input").type = "hidden";
-      }
-
-      //VALIDACIJA SHORTCUT
-      function validiraj(){
-        valid_test=true;
-
-        if (document.getElementById("sport_select").value == 'Drugo'){
-          validiraj_sport();
-        }
-
-        validiraj_ime();
-        validiraj_tel();
-        validiraj_mail();
-        validiraj_pass();
-
-        if(valid_test == true){
-          console.log("Post se objavljuje");
-        } else{
-          console.log("Post se ne objavljuje");
-        }
-      }
-
-    //REGEX VALIDACIJA ZA SPORT
-      function validiraj_sport(){
-
-        var pattern = /^[A-Za-z ]{1,30}$/;
-        var tekst = document.getElementById("forma").sport_input.value;
-        var test = tekst.match(pattern);
-
-        if (test == null) {
-          document.getElementById("sport_error").classList.remove("hidden");
-          valid_test = false;
-      } else{
-        console.log("validiran sport");
-        document.getElementById("sport_error").classList.add("hidden");
-      }
-    }
-
-    //REGEX VALIDACIJA ZA IME
-      function validiraj_ime(){
-
-        var pattern = /^[A-Za-z ]{1,75}$/;
-        var tekst = document.getElementById("forma").ime_input.value;
-        var test = tekst.match(pattern);
-
-        if (test == null) {
-          document.getElementById("ime_error").classList.remove("hidden");
-          valid_test = false;
-      } else{
-        console.log("validirano ime");
-        document.getElementById("ime_error").classList.add("hidden");
-      }
-    }
-
-    //REGEX VALIDACIJA ZA TELEFON
-      function validiraj_tel(){
-
-        var pattern = /^[0-9+]{9,15}$/;
-        var tekst = document.getElementById("forma").tel_input.value;
-        var test = tekst.match(pattern);
-
-        if (test == null) {
-          document.getElementById("tel_error").classList.remove("hidden");
-          valid_test = false;
-      } else{
-        console.log("validiran tel");
-        document.getElementById("tel_error").classList.add("hidden");
-      }
-    }
-
-    //REGEX VALIDACIJA ZA MAIL
-      function validiraj_mail(){
-
-        var pattern = /^[a-zA-Z0-9]+@[a-z]{2,10}\.[a-z]{2,4}$/;
-        var tekst = document.getElementById("forma").mail_input.value;
-        var test = tekst.match(pattern);
-
-        if (test == null) {
-          document.getElementById("mail_error").classList.remove("hidden");
-          valid_test = false;
-      } else{
-        console.log("validiran mail");
-        document.getElementById("mail_error").classList.add("hidden");
-      }
-    }
-
-    //REGEX VALIDACIJA ZA PASS
-      function validiraj_pass(){
-
-        var pattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
-        var tekst = document.getElementById("forma").pass_input.value;
-        var test = tekst.match(pattern);
-
-        if (test == null) {
-          document.getElementById("pass_error").classList.remove("hidden");
-          valid_test = false;
-      } else{
-        console.log("validiran pass");
-        document.getElementById("pass_error").classList.add("hidden");
-      }
-    }
-    </script>
 
 </head>
 
@@ -142,9 +28,9 @@
         <ul>
           <b>
           <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="Novosti.html">Novosti</a></li>
           <li><a href="Događanja.html">Događanja</a></li>
-          <li><a class="active" href="objavi.html">Objavi</a></li>  
-          <li><a href="Novosti.html">Novosti</a></li></b>
+          <li><a class="active" href="objavi.html">Objavi</a></li>  </b>
           <li>
             <!--Dark mode-->
             <div class="mod">
@@ -207,11 +93,11 @@
 
         <!--INPUT ZA DATUM-->
         <h3 class="form-categ">Datum:</h3>
-        <input type="date" class="vreme" />
+        <input type="date" class="vreme" id="datum_input" />
 
         <!--INPUT ZA VREME-->
         <h3 class="form-categ">Vreme:</h3>
-        <input type="time" class="vreme" />
+        <input type="time" class="vreme" id="vreme_input" />
 
         <!--INPUT ZA LOKACIJU-->
         <h3 class="form-categ">Mesto:</h3>
@@ -219,7 +105,7 @@
 
         <!--INPUT ZA SADRZAJ-->
         <h3 class="form-categ">Dodatne informacije:</h3>
-           <div class="sadrzaj" contenteditable></div>
+           <div class="sadrzaj" id="sadrzaj_input" contenteditable></div>
             
             <h2 class="form-1">KONTAKT:</h2>
 
@@ -244,11 +130,6 @@
             <input class="add-input" id="pass_input" type="password" placeholder="Lozinka objave, lozinka mora sadržati više od 6 slova, barem jedan broj i barem jedno slovo:" />
             <p class="valid-error hidden" id="pass_error">Lozinka mora sadrzati vise od 6 slova i mora sadrzati barem jedan broj i jedno slovo.</p>
 
-       <!--------------------------------------------------------->
-       <h2 class="form-1">BOJA OKVIRA:</h2>
-           <input type="color" id="boje">
-           
-       <!--------------------------------------------------------->
           
             <input type="button" class="add-button" id="dodajobjavu" value="DODAJ OBJAVU" onclick="validiraj()" ></input>
           </form>
@@ -256,6 +137,9 @@
     </section>
 
     <!--SCRIPT IMPORT-->
-      <script src="app.js"></script>
+    <script src="app.js"></script>
+    
+    <script src="objavi.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>
