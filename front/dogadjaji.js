@@ -7,10 +7,11 @@ function CreateCard(post) {
     console.log(IDs.length);
     console.log(IDs[IDs.length-1]);
     POSTS.push(post);
+
     let card = `
     <section class="objave">
         <div class="cards">
-            <div class="card-container">
+            <div class="card-container" id="sl${counter}">
               <div class="naslov"> 
                 <h2 class="sport">${post.sport}</h2>
               </div>  
@@ -45,6 +46,49 @@ function RenderPosts(posts) {
     });
 
     cardsDiv.innerHTML = cards;
+    cardsDiv.innerHTML = cards;
+    for(let i=0;i<counter;i++)
+    {
+        let sport=posts[i].sport;
+        let slika="";
+        if(sport==="Fudbal"){
+            slika="../img/404LogoLoptablck.png";
+        }
+        else if(sport==="Košarka"){
+            slika="../img/kosarka.png"
+        }
+        else if(sport==="Rukomet"){
+            slika="../img/rukomet.png";
+        }
+        else if(sport==="Odbojka"){
+            slika="../img/odbojka.png";
+        }
+        else if(sport==="Tenis"){
+            slika="../img/kissclipart-tennis-ball-8375e002a473cc31.png";
+        }
+        else if(sport==="Stoni tenis"){
+            slika="../img/ball-table.png";
+        }
+        else if(sport==="Gimnastika"){
+            slika="../img/images.png";
+        }
+        else if(sport==="Plivanje"){
+            slika="../img/plivanje.png";
+        }
+        else if(sport==="Vaterpolo"){
+            slika="../img/waterpolo.png";
+        }
+        else if(sport==="Šah"){
+            slika="../img/sah.png";
+        }
+        else if(sport==="Workout"){
+            slika="../img/teg.png";
+        }
+        else{
+            slika="../img/patike.png";
+        }
+        document.getElementById(`sl${i}`).style.backgroundImage=`url(${slika})`;
+    }
 }
 
 async function GetData() {
@@ -68,6 +112,7 @@ async function obrisi(id)
         const res = await axios.delete(idstring);
         console.log(res);
         counter=0;
+        POSTS=[String];
         IDs=[String];
         GetData();
     }
@@ -85,17 +130,19 @@ function vidi_jos(id)
         <br><br>
         <h1 class="vise-h1">${currentPost.sport}</h1><br><br>
         <div class="vise-text">
-          <p class="vise-p">Vrsta događaja: ${currentPost.sadrzaj}</p>
-          <p class="vise-p">Datum: </p>
-          <p class="vise-p">Vreme: </p>
-          <p class="vise-p">Mesto: </p>
-          <p class="vise-p">Dodatne informacije: </p><br><br>
-          <h2 class="vise-h2">Kontant: </h2><br>
-          <p class="vise-p">Ime i prezime: </p>
-          <p class="vise-p">Broj telefona: </p>
-          <p class="vise-p">E-Mail adresa: </p>
+          <p class="vise-p">Vrsta događaja: ${currentPost.tip}</p>
+          <p class="vise-p">Datum: ${currentPost.info.datum}</p>
+          <p class="vise-p">Vreme: ${currentPost.info.vreme}</p>
+          <p class="vise-p">Mesto: ${currentPost.info.mesto}</p>
+          <p class="vise-p">Dodatne informacije: ${currentPost.sadrzaj}</p><br><br>
+          <h2 class="vise-h2">Kontant:</h2><br>
+          <p class="vise-p">Ime i prezime: ${currentPost.kontakt.ime}</p>
+          <p class="vise-p">Broj telefona: ${currentPost.kontakt.telefon}</p>
+          <p class="vise-p">E-Mail adresa: ${currentPost.kontakt.mail}</p>
         </div>
+        
         <button class="nazad" onClick="vidi_manje()">NAZAD</button> 
+        
     </div>`
     vidijos.innerHTML=tekst;
 }
