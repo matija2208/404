@@ -1,96 +1,72 @@
-const slideImage = document.querySelectorAll(".slide-image");
-const slidesContainer = document.querySelector(".slides-container");
-const nextBtn = document.querySelector(".next-btn");
-const prevBtn = document.querySelector(".prev-btn");
-const navigationDots = document.querySelector(".navigation-dots");
+const slideContainer = document.querySelector('.container');
+const slide = document.querySelector('.slides');
+const nextBtn = document.getElementById('next-btn');
+const prevBtn = document.getElementById('prev-btn');
+const interval = 4000;
 
-let numberOfImages = slideImage.length;
-let slideWidth = slideImage[0].clientWidth;
-let currentSlide = 0;
+let slides = document.querySelectorAll('.slide');
+let index = 1;
+let slideId;
 
-// Set up the slider
+const firstClone = slides[0].cloneNode(true);
+const lastClone = slides[slides.length - 1].cloneNode(true);
 
-function init() {
-  /*   
-    slideImage[0] = 0
-    slideImage[1] = 100%
-    slideImage[2] = 200%
-    */
+firstClone.id = 'first-clone';
+lastClone.id = 'last-clone';
 
-  slideImage.forEach((img, i) => {
-    img.style.left = i * 100 + "%";
-  });
+slide.append(firstClone);
+slide.prepend(lastClone);
 
-  slideImage[0].classList.add("active");
+const slideWidth = slides[index].clientWidth;
 
-  createNavigationDots();
-}
+slide.style.transform = `translateX(${-slideWidth * index}px)`;
 
-init();
+console.log(slides);
 
-// Create navigation dots
+const startSlide = () => {
+  slideId = setInterval(() => {
+    moveToNextSlide();
+  }, interval);
+};
 
-function createNavigationDots() {
-  for (let i = 0; i < numberOfImages; i++) {
-    const dot = document.createElement("div");
-    dot.classList.add("single-dot");
-    navigationDots.appendChild(dot);
+const getSlides = () => document.querySelectorAll('.slide');
 
-    dot.addEventListener("click", () => {
-      goToSlide(i);
-    });
+slide.addEventListener('transitionend', () => {
+  slides = getSlides();
+  if (slides[index].id === firstClone.id) {
+    slide.style.transition = 'none';
+    index = 1;
+    slide.style.transform = `translateX(${-slideWidth * index}px)`;
   }
 
-  navigationDots.children[0].classList.add("active");
-}
-
-// Next Button
-
-nextBtn.addEventListener("click", () => {
-  if (currentSlide >= numberOfImages - 1) {
-    goToSlide(0);
-    return;
+  if (slides[index].id === lastClone.id) {
+    slide.style.transition = 'none';
+    index = slides.length - 2;
+    slide.style.transform = `translateX(${-slideWidth * index}px)`;
   }
-
-  currentSlide++;
-  goToSlide(currentSlide);
 });
 
-// Previous Button
+const moveToNextSlide = () => {
+  slides = getSlides();
+  if (index >= slides.length - 1) return;
+  index++;
+  slide.style.transition = '.7s ease-out';
+  slide.style.transform = `translateX(${-slideWidth * index}px)`;
+};
 
-prevBtn.addEventListener("click", () => {
-  if (currentSlide <= 0) {
-    goToSlide(numberOfImages - 1);
-    return;
-  }
+const moveToPreviousSlide = () => {
+  if (index <= 0) return;
+  index--;
+  slide.style.transition = '.7s ease-out';
+  slide.style.transform = `translateX(${-slideWidth * index}px)`;
+};
 
-  currentSlide--;
-  goToSlide(currentSlide);
+slideContainer.addEventListener('mouseenter', () => {
+  clearInterval(slideId);
 });
 
-// Go To Slide
+slideContainer.addEventListener('mouseleave', startSlide);
+nextBtn.addEventListener('click', moveToNextSlide);
+prevBtn.addEventListener('click', moveToPreviousSlide);
 
-function goToSlide(slideNumber) {
-  slidesContainer.style.transform =
-    "translateX(-" + slideWidth * slideNumber + "px)";
-
-  currentSlide = slideNumber;
-
-  setActiveClass();
-}
-
-// Set Active Class
-
-function setActiveClass() {
-  // Set active class for Slide Image
-
-  let currentActive = document.querySelector(".slide-image.active");
-  currentActive.classList.remove("active");
-  slideImage[currentSlide].classList.add("active");
-
-  //   set active class for navigation dots
-
-  let currentDot = document.querySelector(".single-dot.active");
-  currentDot.classList.remove("active");
-  navigationDots.children[currentSlide].classList.add("active");
-}
+startSlide();

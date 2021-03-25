@@ -491,9 +491,27 @@
   font-size: 30px;
 }
 
+@-webkit-keyframes animacija{
+  0%{left:0px;}
+  10%{left:0px;}
+  20%{left:1200px;}
+  30%{left:1200px;}
+  40%{left:2400px;}
+  50%{left:2400px;}
+  60%{left:1200px;}
+  70%{left:1200px;}
+  80%{left:0px;}
+  90%{left:0px;}
+  100%{left:0px;}
+}
+
 .wrapper {
   width: 100%;
   overflow: hidden; 
+  -webkit-animation-name: animacija;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+
 }
 .slides-container {
   height: 700px;
@@ -692,5 +710,61 @@
 
 .nazad:hover{
   background-color: #003566;
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+.slides {
+  display: flex;
+  height: 100%;
+}
+.slide {
+  min-width: 100%;
+  position: relative;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+}
+.slide-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#next-btn,
+#prev-btn {
+  cursor: pointer;
+  background: transparent;
+  font-size: 30px;
+  border: none;
+  padding: 10px;
+  color: white;
+}
+#next-btn:focus,
+#prev-btn:focus {
+  outline: none;
+}
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+  font-size: 60px;
   color: white;
 }
