@@ -29,7 +29,7 @@ function CreateCard(post) {
                     <p class="vrsta"><strong>MESTO:</strong></p>
                     <p class="vrsta3">${post.info.mesto}</p>
                 </div>
-                <button class="user-button" id="${counter}" onClick="vidi_jos(this.id)">PRIKAZI VISE</button>
+                <button class="user-button" id="${counter}" onClick="vidi_jos(this.id)">PRIKAŽI VIŠE</button>
                 <button class="delete-button" id="${counter}" onClick = "obrisi(this.id)">🗑️</button>
             </div> 
         </div>
