@@ -2,7 +2,7 @@ var valid_test;
       //PROVERA OTHER
       function other_select(){
         var izbor = document.getElementById("sport_select").value;
-        if (izbor == 'Drugo'){
+        if (izbor === 'Drugo'){
           document.getElementById("sport_input").type = "text";
         } else
         document.getElementById("sport_input").type = "hidden";
