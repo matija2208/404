@@ -470,7 +470,17 @@
 .delete-button:hover {
   background-color: red;
 }
-
+.biranje{
+  background-color: #ceeaff;
+  color: #003566;
+  font-weight: bold;
+  font-size: 25px;
+  padding: 5px;
+  border: 2px solid #003566;
+  width: flex;
+  margin-left: 48%;
+  display: inline-block;
+}
 /*---------------------------POCETNA STRANA-------------------------------------*/
 .index-naslov{
   text-align: center;
@@ -523,28 +533,6 @@
  
 }
 
-/*@-webkit-keyframes animacija{
-  0%{left:0px;}
-  10%{left:0px;}
-  20%{left:1200px;}
-  30%{left:1200px;}
-  40%{left:2400px;}
-  50%{left:2400px;}
-  60%{left:1200px;}
-  70%{left:1200px;}
-  80%{left:0px;}
-  90%{left:0px;}
-  100%{left:0px;}
-}
-
-.wrapper {
-  width: 100%;
-  overflow: hidden; 
-  -webkit-animation-name: animacija;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-
-}*/
 .slides-container {
   height: 700px;
   transition: 900ms cubic-bezier(0.48, 0.15, 0.18, 1);
