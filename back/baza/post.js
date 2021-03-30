@@ -29,6 +29,11 @@ const InfoSchema=new mongoose.Schema({
         trim:true,
         required:true,
     },
+    datumN:{
+        type:Number,
+        trim:true,
+        required:true,
+    },
     vreme:{
         type:String,
         trim:true,
