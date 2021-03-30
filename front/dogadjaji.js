@@ -31,6 +31,7 @@ function CreateCard(post) {
                 </div>
                 <button class="user-button" id="${counter}" onClick="vidi_jos(this.id)">PRIKAŽI VIŠE</button>
                 <button class="delete-button" id="${counter}" onClick = "obrisi(this.id)">🗑️</button>
+                <button class="edit-button" id="${counter}" onClick = "obrisi(this.id)"><i class="far fa-edit"></i></button>
             </div> 
         </div>
     </section>`;
@@ -140,10 +141,11 @@ function vidi_jos(id)
           <p class="vise-p">Broj telefona: ${currentPost.kontakt.telefon}</p>
           <p class="vise-p">E-Mail adresa: ${currentPost.kontakt.mail}</p>
         </div>
-        
+        <br><br><br>
         <button class="nazad" onClick="vidi_manje()">NAZAD</button> 
         
-    </div>`
+    </div>
+    <br><br><br>`
     vidijos.innerHTML=tekst;
 }
 

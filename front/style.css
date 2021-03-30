@@ -470,6 +470,27 @@
 .delete-button:hover {
   background-color: red;
 }
+
+.edit-button{
+  height: 40px;
+  width: 40px;
+  background-color: #30b6f5;
+  color: black;
+  border-radius: 20%;
+  border: none;
+  outline: none;
+
+  position: relative;
+  margin-top: -350px;
+
+  transition: all 0.25s ease;
+}
+
+.edit-button:hover{
+  background-color: #0082e6;
+  color: white;
+}
+
 .biranje{
   background-color: #ceeaff;
   color: #003566;
@@ -477,10 +498,10 @@
   font-size: 25px;
   padding: 5px;
   border: 2px solid #003566;
-  width: flex;
-  margin-left: 48%;
-  display: inline-block;
+  width: 200px;
+  margin-left: 23px;
 }
+
 /*---------------------------POCETNA STRANA-------------------------------------*/
 .index-naslov{
   text-align: center;
@@ -668,7 +689,7 @@
   flex-wrap: wrap;
 }
 .vise{
-  display: flex;
+  display: block;
   flex-wrap: wrap;
   float: center;
   padding: 20px;
@@ -677,6 +698,7 @@
   justify-content: center;
   margin: 0 auto;
   margin-top: 50px;
+  margin-bottom: 75px;
   background-color: white;
   border: 5px solid #003566;
   border-radius: 20px;
