@@ -31,6 +31,7 @@ function CreateCard(post) {
                 </div>
                 <button class="user-button" id="${counter}" onClick="vidi_jos(this.id)">PRIKAŽI VIŠE</button>
                 <button class="delete-button" id="${counter}" onClick = "obrisi(this.id)">🗑️</button>
+                <button class="edit-button" id="${counter}" onClick = "obrisi(this.id)"><i class="far fa-edit"></i></button>
             </div> 
         </div>
     </section>`;
